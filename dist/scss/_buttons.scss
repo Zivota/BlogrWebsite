@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.75rem;
+  height: 3.125rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.button__whitebg {
+  background: $white;
+  color: $lightRed;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: $white;
+  }
+}

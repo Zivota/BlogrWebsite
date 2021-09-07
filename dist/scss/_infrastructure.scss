@@ -1,0 +1,158 @@
+.infrastructure {
+  position: relative;
+  min-height: 34.0625rem;
+  width: 100%;
+  background-image: $blueGradient;
+  border-radius: 0 6rem 0 6rem;
+
+  @include breakpoint(tablet) {
+    min-height: 28rem;
+  }
+
+  @include breakpoint(desktop) {
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__holder {
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 6rem 0 0;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      height: 100%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 250%;
+      width: 140%;
+      background-image: url("/dist/images/bg-pattern-circles.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: -20%;
+      top: -65%;
+
+      @include breakpoint(tablet) {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0;
+        background-position: bottom;
+      }
+
+      @include breakpoint(desktop) {
+        height: 130%;
+        width: 110%;
+        background-size: 80%;
+        top: 0%;
+        left: -27%;
+      }
+
+      @include breakpoint(lg-desktop) {
+        width: 90%;
+        left: -23%;
+      }
+    }
+  }
+
+  &__leftSide {
+    position: relative;
+    height: 18.75rem;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      width: 50%;
+      height: 25rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      // min-height: 150%;
+      height: 150%;
+      top: -50%;
+      left: 0%;
+      background-image: url("/dist/images/illustration-phones.svg");
+      background-size: 20rem;
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      @include breakpoint(tablet) {
+        background-size: 24rem;
+        top: -65%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 100%;
+        top: -4rem;
+        left: 0;
+        background-size: 34rem;
+      }
+    }
+  }
+
+  &__rightSide {
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-top: -6.5rem;
+
+    @include breakpoint(desktop) {
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include breakpoint(lg-desktop) {
+      padding-left: 0;
+    }
+
+    h2 {
+      color: $white;
+      font-size: 2rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+
+      @include breakpoint(desktop) {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    p {
+      line-height: 2;
+      width: 90%;
+      color: $grayishBlue;
+      margin: 0 auto;
+      @include breakpoint(tablet) {
+        width: 60%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 100%;
+        text-align: left;
+        line-height: 1.8;
+      }
+    }
+  }
+}

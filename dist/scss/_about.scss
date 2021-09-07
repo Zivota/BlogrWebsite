@@ -1,0 +1,143 @@
+.about {
+  min-height: 64rem;
+  text-align: center;
+  overflow: hidden;
+
+  &__mainHeading {
+    margin-top: 5.625rem;
+
+    @include breakpoint(desktop) {
+      margin-top: 9.875rem;
+
+      h2 {
+        padding-bottom: 7rem;
+      }
+    }
+  }
+
+  &__mainPart {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__leftSide {
+    width: 90%;
+    text-align: center;
+    padding-left: 1.25rem;
+
+    @include breakpoint(tablet) {
+      width: 80%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 50%;
+      text-align: left;
+      padding-left: 5.375rem;
+
+      p {
+        width: 90%;
+      }
+    }
+
+    @include breakpoint(lg-desktop) {
+      padding-left: 10.375rem;
+    }
+
+    h3 {
+      margin-bottom: 1.2rem;
+      width: 80%;
+      margin-left: 10%;
+      text-align: center;
+      line-height: 1.4;
+
+      @include breakpoint(desktop) {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+        margin-bottom: 2.25rem;
+        line-height: 1.6;
+      }
+    }
+
+    p {
+      color: $veryDarkGrayishBlue;
+      line-height: 1.7;
+    }
+  }
+
+  &__p1 {
+    margin-bottom: 3rem;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 5.375rem;
+    }
+  }
+
+  &__p2 {
+    margin-bottom: 13.75rem;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__rightSide {
+    width: 100%;
+    max-width: 20.625rem;
+    height: 18.125rem;
+    margin: 3rem 0;
+    background-image: url("/dist/images/illustration-editor-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(tablet) {
+      min-width: 26rem;
+      min-height: 22rem;
+    }
+
+    @include breakpoint(desktop) {
+      display: block;
+      position: relative;
+      min-width: 50%;
+      background-image: none;
+      margin: 0;
+      padding: 0;
+      height: 49.375rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("/dist/images/illustration-editor-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        min-height: 100%;
+        min-width: 140%;
+        background-size: contain;
+        left: -5%;
+        bottom: 20%;
+
+        @include breakpoint(lg-desktop) {
+          min-width: 160%;
+          min-height: 120%;
+          left: -20%;
+          bottom: 10%;
+        }
+
+        @include breakpoint(xl-desktop) {
+          min-width: 100%;
+          left: 0%;
+          margin-left: 14.5rem;
+        }
+      }
+    }
+  }
+}
